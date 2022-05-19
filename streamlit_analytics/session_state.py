@@ -24,7 +24,7 @@ try:
     from streamlit.server.Server import Server
 except Exception:
     # Streamlit >= 0.65.0
-    import streamlit.report_thread as ReportThread
+    import streamlit.script_run_context as ReportThread
     from streamlit.server.server import Server
 
 
@@ -71,7 +71,7 @@ def get(**kwargs):
     """
     # Hack to get the session object from Streamlit.
 
-    ctx = ReportThread.get_report_ctx()
+    ctx = ReportThread.get_script_run_ctx()
 
     this_session = None
 
