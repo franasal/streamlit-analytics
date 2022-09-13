@@ -25,7 +25,7 @@ try:
 except Exception:
     # Streamlit >= 0.65.0
     import streamlit.runtime.scriptrunner as ReportThread
-    from streamlit.server.server import Server
+    from streamlit.web.server.server import Server
 
 
 class SessionState(object):
